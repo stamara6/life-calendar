@@ -10,12 +10,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { theme } from '@chakra-ui/core';
-import { merge } from '@chakra-ui/utils';
+import { extendTheme } from '@chakra-ui/core';
 
 LogRocket.init('9aapdz/life-calendar');
 
 // 2. Extend the theme to include custom colors, fonts, etc.
-const customTheme = merge(theme, {
+const customTheme = extendTheme({
   colors: {
     brand: {
       900: '#1a365d',

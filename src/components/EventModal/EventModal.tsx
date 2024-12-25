@@ -51,15 +51,20 @@ export default function EventModal(props: Props) {
               type="date"
               defaultValue={startDateStr}
               onChange={(ev: any) => setSelectedDateValue(ev.target.value)}
+              crossOrigin=""
             />
-            <Input placeholder="Title" mt={2} onChange={(ev: any) => setTitle(ev.target.value)} />
+            <Input placeholder="Title" mt={2} onChange={(ev: any) => setTitle(ev.target.value)} crossOrigin="" />
             <Textarea
               placeholder="Description"
               mt={2}
               rows={4}
               onChange={(ev: any) => setDescription(ev.target.value)}
             />
-            <Input placeholder="Type (-3, -2, -1, 0, 1, 2, or 3)" onChange={(ev: any) => setType(ev.target.value)} />
+            <Input
+              placeholder="Type (-3, -2, -1, 0, 1, 2, or 3)"
+              onChange={(ev: any) => setType(ev.target.value)}
+              crossOrigin="anonymous"
+            />
           </ModalBody>
 
           <ModalFooter>

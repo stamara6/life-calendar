@@ -12,12 +12,13 @@ import {
   Button,
   // ButtonGroup,
   Checkbox
-} from '@chakra-ui/core';
+} from '@chakra-ui/core'; // Update the import path if necessary
+import { FocusableElement } from '@chakra-ui/utils'; // Add this line
 import { useRecoilState } from 'recoil';
 import { appState } from '../../utils/AppState';
 
 export default function OptionModal() {
-  const initialFocusRef = React.useRef();
+  const initialFocusRef = React.useRef<FocusableElement>(null);
   const [state, setState] = useRecoilState<any>(appState);
   return (
     <Popover initialFocusRef={initialFocusRef} placement="bottom">
